@@ -1,0 +1,34 @@
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #00bcd4, #009688);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.pagination-button:disabled {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #009688, #00bcd4);
+  transform: scale(1.05);
+}
+
+.pagination-button:active:not(:disabled) {
+  background: linear-gradient(135deg, #00897b, #00acc1);
+  transform: scale(0.98);
+}

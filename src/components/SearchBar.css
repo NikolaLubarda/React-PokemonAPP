@@ -1,0 +1,54 @@
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-bar {
+  width: 350px;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  outline: none;
+  background: linear-gradient(120deg, #f0f8ff, #e0f7fa);
+  background-clip: padding-box;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 -3px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.4s ease;
+}
+
+.search-bar::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.search-bar:focus {
+  border: 2px solid #00bcd4;
+  background: linear-gradient(120deg, #e0f7fa, #f0f8ff);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3), 0 0 8px rgba(0, 188, 212, 0.5);
+}
+
+.search-bar:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25),
+    inset 0 -3px 0 rgba(255, 255, 255, 0.6);
+}
+
+.search-bar:focus:hover {
+  transform: scale(1.03);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.2), 0 0 10px rgba(0, 188, 212, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5), 0 0 30px rgba(0, 188, 212, 0.7);
+  }
+}
+
+.search-bar:focus {
+  animation: glow 1.5s infinite alternate;
+}
