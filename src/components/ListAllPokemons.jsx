@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./ListAllPokemons.css";
 
 export default function ListAllPokemons({ error, pokemonDetails }) {
@@ -9,9 +10,9 @@ export default function ListAllPokemons({ error, pokemonDetails }) {
         <ul className="pokemon-list">
           {pokemonDetails.map((pokemon) => (
             <li className="pokemon-item" key={pokemon.name}>
-              <a href={pokemon.url}>
+              <Link to={`/pokemon/${pokemon.name}`}>
                 {pokemon.name} <img src={pokemon.sprite} alt={pokemon.name} />
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
